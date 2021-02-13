@@ -29,11 +29,14 @@ files.forEach(filename => {
 Promise.all(promiseList).then(() => {
   let pass = true;
 
+  const list = [];
+
   console.log('正在查找重复图片...');
 
   for (hash1 of hashList) {
+    list.push(hash1.file);
     for(hash2 of hashList) {
-      if(hash1.file === hash2.file) continue;
+      if(list.indexOf(hash2.file) !== -1) continue;
 
       if(leven(hash1.hash, hash2.hash) <= 6) {
         pass = false;
