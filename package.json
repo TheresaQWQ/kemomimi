@@ -1,0 +1,27 @@
+{
+  "name": "kemomimi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "imghash": "0.0.8",
+    "leven": "^3.1.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TheresaQWQ/kemomimi.git"
+  },
+  "keywords": [
+    "kemomimi"
+  ],
+  "author": "TheresaQWQ",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TheresaQWQ/kemomimi/issues"
+  },
+  "homepage": "https://github.com/TheresaQWQ/kemomimi#readme"
+}
