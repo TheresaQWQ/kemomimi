@@ -41,6 +41,16 @@ Promise.all(promiseList).then(() => {
       if(leven(hash1.hash, hash2.hash) <= 6) {
         pass = false;
         console.log(`发现重复图片: ${hash1.file}, ${hash2.file}`)
+        const file1 = fs.statSync(`./image/${hash1.file}`)
+        const file2 = fs.statSync(`./image/${hash2.file}`)
+
+        if(file1.size > file2.size) {
+          fs.unlinkSync(`./image/${hash2.file}`)
+          console.log(`已删除 ${hash2.file}`)
+        } else {
+          fs.unlinkSync(`./image/${hash1.file}`)
+          console.log(`已删除 ${hash1.file}`)
+        }
       }
     }
   }
